@@ -1,0 +1,10 @@
+import torch
+a = torch.tensor(float(input("Enter A : ")), requires_grad=True)
+b = torch.tensor(float(input("Enter B : ")), requires_grad=True)
+x = (2*a) + (3*b)
+y = (5*a*a) + (3*b*b*b)
+z = (2*x) + (3*y)
+z.backward()
+print(f"dZ/dA = {a.grad.item()}")
+# za = 2*2 + 3 * (10*a)
+# print(za.item())
